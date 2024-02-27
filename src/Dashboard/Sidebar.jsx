@@ -3,6 +3,7 @@ import { Drawer, Space } from "antd";
 import { IoReorderThreeSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -16,14 +17,19 @@ const Sidebar = () => {
   };
   return (
     <>
-      <Space className="border w-full rounded-md px-5 py-4">
-        <div
-          onClick={showDrawer}
-          className="text-3xl hover:bg-gray-200 hover:rounded-full"
-        >
-          <IoReorderThreeSharp />
-        </div>
-      </Space>
+      <section className="border w-full rounded-md px-5 py-4 flex items-center justify-between">
+        <Space>
+          <div
+            onClick={showDrawer}
+            className="text-3xl p-1 hover:bg-gray-200 hover:rounded-full"
+          >
+            <IoReorderThreeSharp />
+          </div>
+        </Space>
+        <Space>
+          <Navbar />
+        </Space>
+      </section>
       <Drawer
         title="EIA"
         placement={placement}
@@ -35,7 +41,7 @@ const Sidebar = () => {
           <Space>
             <div
               onClick={onClose}
-              className="text-2xl hover:cursor-pointer hover:bg-gray-200 hover:rounded-full"
+              className="text-2xl hover:cursor-pointer p-1 hover:bg-gray-200 hover:rounded-full"
             >
               <RxCross2 />
             </div>
