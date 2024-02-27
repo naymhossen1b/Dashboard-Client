@@ -1,7 +1,13 @@
+import useMainData from "../Hooks/useMainData";
+
 const Dashboard = () => {
+
+  const [mainData] = useMainData()
+  console.log(mainData);
+
   return (
     <div>
-      <p className=" text-black">Dashboard</p>
+      <p>{mainData?.length}</p>
     </div>
   );
 };
