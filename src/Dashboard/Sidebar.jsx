@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Drawer, Space } from "antd";
-import { IoReorderThreeSharp } from "react-icons/io5";
+import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import SearchModal from "../Components/SearchModal";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -18,12 +19,15 @@ const Sidebar = () => {
   return (
     <>
       <section className="border w-full rounded-md px-5 py-4 flex items-center justify-between">
-        <Space>
+        <Space className=" flex items-center">
           <div
             onClick={showDrawer}
             className="text-3xl p-1 hover:bg-gray-200 hover:rounded-full"
           >
-            <IoReorderThreeSharp />
+            <HiMiniBars3BottomLeft />
+          </div>
+          <div>
+            <SearchModal />
           </div>
         </Space>
         <Space>
