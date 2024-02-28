@@ -6,7 +6,7 @@ const useMainData = () => {
     queryKey: ["mainData"],
     queryFn: async () => {
       const res = await SecureAxios.get("/v1/allData");
-      console.log(res);
+      // console.log(res);
       return res?.data;
     },
   });

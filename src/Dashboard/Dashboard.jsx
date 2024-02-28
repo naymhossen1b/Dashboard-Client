@@ -1,13 +1,17 @@
-import useMainData from "../Hooks/useMainData";
+import Intensity from "../Pages/Intensity/Intensity";
 
 const Dashboard = () => {
-
-  const [mainData] = useMainData()
-  console.log(mainData);
-
   return (
-    <div>
-      <p>{mainData?.length}</p>
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-8"> 
+      <div>
+        <Intensity />
+      </div>
+      <div>
+        <Intensity />
+      </div>
+      <div>
+        <Intensity />
+      </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import SearchModal from "../Components/SearchModal";
+import { MdDashboardCustomize } from "react-icons/md";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -52,8 +53,11 @@ const Sidebar = () => {
           </Space>
         }
       >
-        <div className="">
-          <Link to="/dashboard">Dashboard</Link>
+        <div>
+          <Link className=" flex items-center gap-3 hover:bg-gray-100 hover:py-2 hover:rounded-sm hover:px-2" to="/">
+            <MdDashboardCustomize className=" text-xl" />
+            Dashboard
+          </Link>
         </div>
       </Drawer>
     </>
